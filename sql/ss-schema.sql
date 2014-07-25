@@ -28,7 +28,7 @@ CREATE TABLE `ss_collection` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Collection id',
   `name` varchar(60) NOT NULL COMMENT 'Collection name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `ss_copyright_class` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Copyright class id',
   `name` char(1) NOT NULL COMMENT 'Copyright class',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `ss_copyright_holder` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Copyright holder id',
   `name` varchar(200) NOT NULL COMMENT 'Copyright holder name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=568 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `ss_format` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Format id',
   `name` varchar(50) NOT NULL COMMENT 'Format name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +173,7 @@ CREATE TABLE `ss_keyword` (
   `name` varchar(60) NOT NULL COMMENT 'Keyword',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3308 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `ss_kind` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Image kind id',
   `name` varchar(60) NOT NULL COMMENT 'Image kind name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -201,7 +201,7 @@ CREATE TABLE `ss_location` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Location id',
   `name` varchar(100) NOT NULL COMMENT 'Location name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=229 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +215,7 @@ CREATE TABLE `ss_news_restriction` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'News restriction id',
   `name` varchar(1000) NOT NULL COMMENT 'News restriction name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,7 +229,7 @@ CREATE TABLE `ss_personality` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Personality id',
   `name` varchar(2000) NOT NULL COMMENT 'Personality name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12792 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +243,7 @@ CREATE TABLE `ss_photographer` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Photographer id',
   `name` varchar(200) NOT NULL COMMENT 'Photographer name',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1399 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -286,7 +286,7 @@ CREATE TABLE `ss_subject` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Subject term id',
   `name` varchar(200) NOT NULL COMMENT 'Subject term',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -302,4 +302,4 @@ CREATE TABLE `ss_subject` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-25  8:15:43
+-- Dump completed on 2014-07-25 10:58:28
