@@ -1,0 +1,34 @@
+# ss.fenkle
+
+ProxyRequests Off
+
+<VirtualHost *:80>
+  ServerName ss.fenkle
+  ServerAlias ss
+
+  DocumentRoot /opt/ss/app/public
+  CustomLog /opt/ss/app/logs/apache.access_log combined
+  ErrorLog /opt/ss/app/logs/apache.error_log
+  RewriteLog /opt/ss/app/logs/apache.rewrite_log
+  RewriteLogLevel 9
+
+  LogLevel debug
+
+  AddOutputFilterByType DEFLATE text/html application/json application/javascript text/css
+
+  <Directory "/opt/ss/app/public">
+    AllowOverride None
+    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+    Order allow,deny
+    Allow from all
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^asset/([0-9a-f]{3})([0-9a-f]{3})([0-9a-f]{34})\.(\w+)$ asset/$1/$2/$3.$4 [QSA]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ /dispatch.fcgi/$1 [QSA,L]
+  </Directory>
+
+</VirtualHost>
+
+
