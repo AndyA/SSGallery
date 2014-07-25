@@ -173,7 +173,7 @@ CREATE TABLE `ss_keyword` (
   `name` varchar(60) NOT NULL COMMENT 'Keyword',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3308 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3322 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -302,4 +302,4 @@ CREATE TABLE `ss_subject` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-25 10:58:28
+-- Dump completed on 2014-07-25 12:34:35
