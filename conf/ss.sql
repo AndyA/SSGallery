@@ -20,7 +20,16 @@ SELECT
   l.name AS location,
   pe.name AS personality,
   ph.name AS photographer,
-  s.name AS subject
+  s.name AS subject,
+  (
+    SELECT
+      GROUP_CONCAT(k.name SEPARATOR ', ')
+    FROM
+      ss_keyword AS k,
+      ss_image_keyword AS ik
+    WHERE ik.id=k.id
+      AND ik.acno=i.acno
+  ) AS keywords
 FROM
   ss_image AS i
 LEFT JOIN (
