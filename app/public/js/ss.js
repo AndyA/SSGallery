@@ -51,7 +51,7 @@ $(function() {
     var img = info['var']['display_high'];
     var full = info['var']['full'];
     var body = '';
-    if (info.headline) body += textDiv('headline', info.headline);
+    if (info.headline) body += rawDiv('headline', info.headline);
     if (info.annotation) body += rawDiv('annotation', info.annotation);
     if (info.origin_date) body += textDiv('origin-date', info.origin_date);
     if (info.latitude && info.longitude) body += rawDiv('map-link', '<a target="_blank" href="' + makeMapLink(info.latitude, info.longitude) + '">map</a>');
