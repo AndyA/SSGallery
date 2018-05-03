@@ -85,7 +85,13 @@ sub search {
   $size = MAX_PAGE if $size > MAX_PAGE;
 
   my $sph = Sphinx::Search->new();
-  $sph->SetMatchMode(SPH_MATCH_EXTENDED);
+
+  {
+    local $SIG{__WARN__} = sub { };
+    # May throw a warning, offend Dancer
+    $sph->SetMatchMode(SPH_MATCH_EXTENDED);
+  }
+
   $sph->SetSortMode(SPH_SORT_RELEVANCE);
   $sph->SetLimits( $start, $size );
   my $results = $sph->Query( $query, 'ss_idx' );
@@ -179,8 +185,7 @@ sub get_tag {
       {}, $tag
     )
   )[0];
-  $self->dbh->do(
-    'INSERT INTO ss_image_keyword (id, acno) VALUES (?, ?)',
+  $self->dbh->do( 'INSERT INTO ss_image_keyword (id, acno) VALUES (?, ?)',
     {}, $id, $acno );
   return { id => $id, name => $tag };
 }

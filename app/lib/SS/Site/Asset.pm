@@ -13,7 +13,7 @@ SS::Site::Asset - Asset handling
 
 =cut
 
-use constant DOCROOT => '/opt/ss/app/public';    # FIXME
+use constant DOCROOT => '/opt/shitshifter.com/app/public';    # FIXME
 
 # TODO move this into a config file.
 my %RECIPE = (
